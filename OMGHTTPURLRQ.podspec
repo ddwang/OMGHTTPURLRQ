@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  `xcodebuild -project OMGHTTPURLRQ.xcodeproj -showBuildSettings` =~ /CURRENT_PROJECT_VERSION = ((\d\.)+\d?)/
+  `xcodebuild -project OMGHTTPURLRQ.xcodeproj -showBuildSettings` =~ /CURRENT_PROJECT_VERSION = (\d+(\.\d)*)/
   abort if $1.nil?
   s.version = $1
   
